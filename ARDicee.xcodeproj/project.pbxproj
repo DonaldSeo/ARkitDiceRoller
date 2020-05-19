@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4040037C24749191008599EF /* fireplace.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4040037B24749190008599EF /* fireplace.mp3 */; };
 		40758399247305C100C12964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40758398247305C100C12964 /* AppDelegate.swift */; };
 		4075839B247305C100C12964 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 4075839A247305C100C12964 /* art.scnassets */; };
 		4075839D247305C100C12964 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4075839C247305C100C12964 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4040037B24749190008599EF /* fireplace.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fireplace.mp3; sourceTree = "<group>"; };
 		40758395247305C100C12964 /* ARDicee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDicee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40758398247305C100C12964 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4075839A247305C100C12964 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -37,6 +39,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4040037A2474912D008599EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4040037B24749190008599EF /* fireplace.mp3 */,
+				4075839A247305C100C12964 /* art.scnassets */,
+				407583A1247305CA00C12964 /* Assets.xcassets */,
+				407583A3247305CA00C12964 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		4075838C247305C000C12964 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +69,10 @@
 		40758397247305C100C12964 /* ARDicee */ = {
 			isa = PBXGroup;
 			children = (
+				4040037A2474912D008599EF /* Resources */,
 				40758398247305C100C12964 /* AppDelegate.swift */,
 				4075839C247305C100C12964 /* ViewController.swift */,
 				4075839E247305C100C12964 /* Main.storyboard */,
-				4075839A247305C100C12964 /* art.scnassets */,
-				407583A1247305CA00C12964 /* Assets.xcassets */,
-				407583A3247305CA00C12964 /* LaunchScreen.storyboard */,
 				407583A6247305CA00C12964 /* Info.plist */,
 			);
 			path = ARDicee;
@@ -127,6 +138,7 @@
 			files = (
 				4075839B247305C100C12964 /* art.scnassets in Resources */,
 				407583A5247305CA00C12964 /* LaunchScreen.storyboard in Resources */,
+				4040037C24749191008599EF /* fireplace.mp3 in Resources */,
 				407583A2247305CA00C12964 /* Assets.xcassets in Resources */,
 				407583A0247305C100C12964 /* Main.storyboard in Resources */,
 			);

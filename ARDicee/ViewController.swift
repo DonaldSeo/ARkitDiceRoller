@@ -13,6 +13,8 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
     
     var diceArray = [SCNNode]()
+    
+    var audioSource: SCNAudioSource!
 
     @IBOutlet var sceneView: ARSCNView!
     
@@ -51,6 +53,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 //        sceneView.showsStatistics = true
 //
         // Create a new scene
+        
+        setUpAudio()
 
     }
     
@@ -70,6 +74,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
+        for dice in diceArray {
+            dice.removeAllAudioPlayers()
+        }
         // Pause the view's session
         sceneView.session.pause()
     }
@@ -110,6 +117,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             diceArray.append(diceNode)
             // Set the scene to the view
             sceneView.scene.rootNode.addChildNode(diceNode)
+            diceNode.addAudioPlayer(SCNAudioPlayer(source: audioSource))
+            playSound(on: diceNode)
             
             roll(dice: diceNode)
         }
@@ -184,6 +193,24 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         return planeNode
         
+    }
+    
+    
+    // MARK: - Sound
+    private func setUpAudio() {
+        
+        audioSource = SCNAudioSource(fileNamed: "fireplace.mp3")
+        
+        audioSource.loops = true
+        
+        audioSource.load()
+    }
+    
+    private func playSound(on objectNode: SCNNode) {
+        // Ensure there is only one audio player
+        objectNode.removeAllAudioPlayers()
+        // Create a player from the source and add it to `objectNode`
+        objectNode.addAudioPlayer(SCNAudioPlayer(source: audioSource))
     }
 
 
